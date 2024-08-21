@@ -12,14 +12,12 @@
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 */
 /*eslint-disable*/
 import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
-import { PropTypes } from "prop-types";
+import PropTypes from "prop-types";
 
 // reactstrap components
 import {
@@ -77,6 +75,7 @@ const Sidebar = (props) => {
             to={prop.layout + prop.path}
             tag={NavLinkRRD}
             onClick={closeCollapse}
+            activeClassName="active"
           >
             <i className={prop.icon} />
             {prop.name}
